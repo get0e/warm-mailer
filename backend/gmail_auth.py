@@ -8,7 +8,7 @@ load_dotenv()
 # ✅ Read from env (fallback to empty if not found)
 CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "")
 CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
-REDIRECT_URI = os.getenv("GOOGLE_REDIRECT_URI", "https://warm-mailer-aib9.onrender.com/auth/callback")
+REDIRECT_URI = os.getenv("GOOGLE_REDIRECT_URI", "https://warm-mailer-epom.onrender.com/auth/callback")
 
 SCOPES = [
     "https://www.googleapis.com/auth/gmail.send",

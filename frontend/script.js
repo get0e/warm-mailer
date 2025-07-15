@@ -1,4 +1,4 @@
-const BASE_URL = "https://warm-mailer-aib9.onrender.com"; 
+const BASE_URL = "https://warm-mailer-epom.onrender.com"; 
 
 let emailList = [];
 let sentCount = 0;
