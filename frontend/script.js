@@ -9,7 +9,7 @@ let loggedInEmail = null;
 
 const fileInput = document.getElementById("csvInput");
 const sendBtn = document.getElementById("sendBtn");
-const viewRepliesBtn = document.getElementById("viewRepliesBtn");
+const viewRepliesBtn = document.getElementById("viewRepliesBtn")||null;
 const textarea = document.getElementById("templateText");
 const subjectLine = document.getElementById("subjectLine");
 const totalCountDisplay = document.getElementById("total-count");
