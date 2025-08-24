@@ -22,20 +22,22 @@ function showStatus(message, isError = false) {
     setTimeout(() => {
       statusDiv.innerHTML = '';
     }, 10000);
-  }
+  } 
 }
 
 
 window.addEventListener("DOMContentLoaded", async () => {
-  console.log("🔍 DOM loaded, checking authentication...");
+  console.log(" DOM loaded, checking authentication... ");
 
   const params = new URLSearchParams(window.location.search);
   const email = params.get("email");
   loggedInEmail = email;
 
   if (!email) {
+    if (!window.location.pathname.includes("login_inlined_bg.html")) {
     console.log(" Missing email in URL, redirecting to auth");
     window.location.href = `${BASE_URL}/authorize`;
+    }
     return;
   }
 

@@ -2,10 +2,8 @@ import os
 from dotenv import load_dotenv
 from google_auth_oauthlib.flow import Flow
 
-# ✅ Load variables from .env file
 load_dotenv()
 
-# ✅ Read from env (fallback to empty if not found)
 CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "")
 CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
 REDIRECT_URI = os.getenv("GOOGLE_REDIRECT_URI", "https://warm-mailer-epom.onrender.com/auth/callback")
@@ -17,7 +15,6 @@ SCOPES = [
     "openid"
 ]
 
-# Google recommends using client_config for dynamic loading
 def _build_flow(state: str | None = None) -> Flow:
     return Flow.from_client_config(
         {
